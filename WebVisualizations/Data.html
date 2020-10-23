@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-default">
+   <!-- Navbar -->
+   <nav class="navbar navbar">
     <div class="container-fluid navbar-custom">
 
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,18 +27,19 @@
             <span class="icon-bar"></span>
           </button>
           <div class="col-xs-9 phone-nav">
-            <a class="navbar-brand" href="landing.html" id="landing-btn">Latitude</a>
+            <a class="navbar-brand" style="background-color: #21c7c7;" href= "landing.html" id="landing-btn">Latitude</a>
           </div>
         </div>  <!-- navbar-header -->
 
         <!-- Collect the navigation links, forms and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right"> 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="nav navbar-nav navbar-right"navbar-right-custom> 
             </li> 
-                 
             <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a href="MaxTemperature.html">Max Temperature</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="Humidity.html">Humidity</a></li>
@@ -48,32 +49,36 @@
               <li><a href="WindSpeed.html">Wind Speed</a></li>
             </ul>
             <li><a href="Comparison.html">Comparison</a></li>
-            <li><a href="Data.html">Data</a></li>   
-            <li><a href="">    </a></li>
-             
+            <li><a href="Data.html">Data</a></li>        
+            <li><a href="">    </a></li> 
           </ul>
         </div>    <!-- /.navbar-collapse -->
     </div> <!-- /.container-fluid -->
   </nav>
 
-
-
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>City_ID</th>
-      <th>City</th>
-      <th>Cloudiness</th>
-      <th>Country</th>
-      <th>Date</th>
-      <th>Humidity</th>
-      <th>Lat</th>
-      <th>Lng</th>
-      <th>Max Temp</th>
-      <th>Wind Speed</th>
-    </tr>
-  </thead>
+  <!-- Content -->
+  <div class="container">
+    <div class="box">
+      <h3 class="title">Data</h3>
+      <hr>
+      <p>The following table includes all of the data used for plotting during this project.</p>
+      <br>
+      <div class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th title="Field #1">City_ID</th>
+              <th title="Field #2">City</th>
+              <th title="Field #3">Cloudiness</th>
+              <th title="Field #4">Country</th>
+              <th title="Field #5">Date</th>
+              <th title="Field #6">Humidity</th>
+              <th title="Field #7">Lat</th>
+              <th title="Field #8">Lng</th>
+              <th title="Field #9">Max Temp</th>
+              <th title="Field #10">Wind Speed</th>
+            </tr>
+          </thead>
   <tbody>
     <tr>
       <td>0</td>
@@ -6641,3 +6646,7 @@
     </tr>
   </tbody>
 </table>
+
+</body>
+
+</html>

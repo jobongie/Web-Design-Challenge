@@ -10,12 +10,12 @@
     <!-- Bring in our bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="Style.css" media="screen">
- 
+  
 </head>
  
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar">
     <div class="container-fluid navbar-custom">
 
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,17 +27,19 @@
             <span class="icon-bar"></span>
           </button>
           <div class="col-xs-9 phone-nav">
-            <a class="navbar-brand" href= "landing.html" id="landing-btn">Latitude</a>
+            <a class="navbar-brand" style="background-color: #21c7c7;" href= "landing.html" id="landing-btn">Latitude</a>
           </div>
         </div>  <!-- navbar-header -->
 
         <!-- Collect the navigation links, forms and other content for toggling -->
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="nav navbar-nav navbar-right"navbar-right-custom> 
             </li> 
             <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a href="MaxTemperature.html">Max Temperature</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="Humidity.html">Humidity</a></li>
@@ -58,17 +60,17 @@
     <section class="row">
       <div class="col-sm-8">
         <article class="description-content">
-          <h1 class="description-header">Summary: Latitude vs. X</h1>
+          <h1 class="description-header">Summary: City Latitude vs. X</h1>
           <hr class="description-hr"/>
-          <img src="Resources/assets/images/Fig1.png" alt="" id="description-image"/>
+          
           <p>The purpose of this assignment was to analyze and visualize the weather of 500+ 
               cities across the world of varying distance from the equator.More specifically, 
               we build a series of scatter plots to showcase the following relationships:Temperature (F) vs. Latitude,
               Humidity (%) vs. Latitude, Cloudiness (%) vs. Latitude, Wind Speed (mph) vs. Latitude. 
               To accomplish this we created a Python script that collected data from OpenWeatherMap API
               to create a representative model of weather across world cities.</p>
-        </article> <!-- article -->
-      </div> <!-- col-sm-8 -->
+
+      
 
       <div class="col-sm-4">
         <!-- Visualizations imageNav area -->
@@ -77,10 +79,18 @@
             <h2 class="imageNav-header">Visualizations</h2>
             <hr />
             <div id="images">
-                <a href="MaxTemperature.html"><img src="Resources/assets/images/Fig1.png" class="imageNav-photo"></a>
-                <a href="Humidity.html"><img src="Resources/assets/images/Fig2.png" class="imageNav-photo"></a>
-                <a href="Cloudiness.html"><img src="Resources/assets/images/Fig3.png" class="imageNav-photo"></a>
-                <a href="WindSpeed.html"><img src="Resources/assets/images/Fig4.png" class="imageNav-photo"></a> 
+                <a target="_blank" href="MaxTemperature.html"> 
+                <img src="Resources/assets/images/Fig1.png" class="imageNav-photo" alt="Max Temp">
+                </a>
+                <a target="_blank" href="Humidity.html"> 
+                <img src="Resources/assets/images/Fig2.png" class="imageNav-photo" alt="Humidity">
+                </a>
+                <a target="_blank" href="Cloudiness.html"> 
+                <img src="Resources/assets/images/Fig3.png" class="imageNav-photo" alt="Cloudiness">
+                </a>
+                <a target="_blank" href="WindSpeed.html"> 
+                <img src="Resources/assets/images/Fig4.png" class="imageNav-photo" alt="Wind Speed">
+                </a> 
             </div>
           </div>  <!-- imageNav content -->
         </article>  <!-- imageNav-area -->
